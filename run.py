@@ -34,7 +34,7 @@ chat = ""
 chat_now = ""
 chat_prev = ""
 is_Speaking = False
-owner_name = "Ardha"
+owner_name = "Hagalaz"
 blacklist = ["Nightbot", "streamelements"]
 
 # function to get the user's input audio
@@ -108,7 +108,7 @@ def openai_answer():
     prompt = getPrompt()
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=prompt,
         max_tokens=128,
         temperature=1,
@@ -187,7 +187,7 @@ def translate_text(text):
 
     # tts will be the string to be converted to audio
     detect = detect_google(text)
-    tts = translate_google(text, f"{detect}", "JA")
+    tts = translate_google(text, f"{detect}", "EN")
     # tts = translate_deeplx(text, f"{detect}", "JA")
     tts_en = translate_google(text, f"{detect}", "EN")
     try:
