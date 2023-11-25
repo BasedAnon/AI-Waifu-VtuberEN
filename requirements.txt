@@ -10,3 +10,6 @@ pytchat
 requests
 torch
 unidic
+numpy
+simpleaudio
+pyht
